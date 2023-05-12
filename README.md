@@ -302,11 +302,13 @@ Víctor
 En monstruito: 
 
 Abrir terminal
-(en desuso) -conda activate deeplabcrf
 
 estar en (base) de anaconda (conda deactivate)
+
 pip uninstall pydensecrf -y
 
 Usar alguna de las 2 librerias
+
 pip install git+https://github.com/victorbug/pydensecrf.git
+
 pip install git+https://github.com/lucasb-eyer/pydensecrf.git
