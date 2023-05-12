@@ -295,3 +295,18 @@ Testing
 
 Thanks to @MarvinTeichmann we now have proper tests, install the package and run `py.test`.
 Maybe there's a better way to run them, but both of us don't know :smile:
+
+
+Víctor
+=======
+En monstruito: 
+
+Abrir terminal
+(en desuso) -conda activate deeplabcrf
+
+estar en (base) de anaconda (conda deactivate)
+pip uninstall pydensecrf -y
+
+Usar alguna de las 2 librerias
+pip install git+https://github.com/victorbug/pydensecrf.git
+pip install git+https://github.com/lucasb-eyer/pydensecrf.git
