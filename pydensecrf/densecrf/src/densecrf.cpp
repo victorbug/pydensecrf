@@ -66,14 +66,20 @@ void DenseCRF2D::addPairwiseGaussian ( const unsigned char* npykerx, const unsig
 		for( int i=0; i<W_; i++ ){
 			int npykerxij=npykerx[j*W_+i];
 			int npykeryij=npykery[j*W_+i];
+
+			//sxnpykerxij=sx+npykerxij
+			//synpykeryij=sy+npykeryij
 			//feature(0,j*W_+i) = i / (sx2+npykerxij);
 			//feature(1,j*W_+i) = j / (sy2+npykeryij);
-
+			//std::cout << "CPP el valor de la variable x es: " << sxnpykerxij << std::endl;
+			//std::cout << "CPP el valor de la variable y es: " << sxnpykerxij << std::endl;
 
 			//feature(0,j*W_+i) = i / sx;
 			//feature(1,j*W_+i) = j / sy;
-			feature(0,j*W_+i) = i / (sx+npykerxij);
-			feature(1,j*W_+i) = j / (sy+npykeryij);
+			//feature(0,j*W_+i) = i / (sx+npykerxij);
+			//feature(1,j*W_+i) = j / (sy+npykeryij);
+			feature(0,j*W_+i) = i / (npykerxij);
+			feature(1,j*W_+i) = j / (npykeryij);
 
 		}
 	addPairwiseEnergy( feature, function, kernel_type, normalization_type );
