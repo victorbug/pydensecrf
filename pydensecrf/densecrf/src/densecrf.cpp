@@ -78,8 +78,8 @@ void DenseCRF2D::addPairwiseGaussian ( const unsigned char* npykerx, const unsig
 			//feature(1,j*W_+i) = j / sy;
 			//feature(0,j*W_+i) = i / (sx+npykerxij);
 			//feature(1,j*W_+i) = j / (sy+npykeryij);
-			feature(0,j*W_+i) = i / (npykerxij);
-			feature(1,j*W_+i) = j / (npykeryij);
+			feature(0,j*W_+i) = i / (sx+npykerxij);
+			feature(1,j*W_+i) = j / (sy+npykeryij);
 
 		}
 	addPairwiseEnergy( feature, function, kernel_type, normalization_type );

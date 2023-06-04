@@ -21,7 +21,7 @@ except ImportError:
 setup(
     name="pydensecrf",
     version="1.0rc2",
-    description="A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code. Modificado por Víctor",
+    description="A python interface to Philipp Krähenbühl's fully-connected (dense) CRF code. Modificado por Víctor 20230603",
     long_description="See the README.md at http://github.com/lucasb-eyer/pydensecrf",
     author="Lucas Beyer",
     author_email="lucasb.eyer.be@gmail.com",
